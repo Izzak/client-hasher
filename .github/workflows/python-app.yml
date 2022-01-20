@@ -27,3 +27,13 @@ jobs:
     - name: Run imohash
       run: |
         python imohash_test.py
+    - name: Commit hash
+      run: |
+        git config --global user.name 'Izzak'
+        git config --global user.email 'tomas-dockal@seznam.cz'
+        git commit -am "Automated hash"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
