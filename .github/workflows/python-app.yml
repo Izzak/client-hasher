@@ -31,7 +31,8 @@ jobs:
       run: |
         git config --global user.name 'Izzak'
         git config --global user.email 'tomas-dockal@seznam.cz'
-        git commit -am "Automated hash"
+        git add .
+        git commit -m "Autohashing" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
