@@ -34,7 +34,6 @@ jobs:
       run: |
         git config --global user.name 'Izzak'
         git config --global user.email 'tomas-dockal@seznam.cz'
-#        git add --force hash.txt
         git add --force filelist.xml
         git commit -m "Autohashing" -a
     - name: Push changes
