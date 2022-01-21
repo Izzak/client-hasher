@@ -10,16 +10,16 @@
 	</PatchDirectories>
 	<PatchFiles>
 		<PatchFile>
-			<Name>pack\c2ee9f085ed07365fc092be27d12790b</Name>
-			<Hash>e98b97c3b8bf1cbc2998ad6f4b70b62b</Hash>
+			<Name>pack\f0a88fd33914b1e1db6aca7ac47ed5a7</Name>
+			<Hash>f0a88fd33914b1e1db6aca7ac47ed5a7</Hash>
 		</PatchFile>
 		<PatchFile>
-			<Name>pack\9599b807c2fbf84eb4adfc5ae2bdd9cf</Name>
-			<Hash>dc0354329d6f2bd27fdd4f2bfa6b57fe</Hash>
+			<Name>pack\cfdaa91bba4626d4135c1e03bfd660ab</Name>
+			<Hash>cfdaa91bba4626d4135c1e03bfd660ab</Hash>
 		</PatchFile>
 		<PatchFile>
-			<Name>pack\edb2910667af8b5dcc2784766a0b3eb0</Name>
-			<Hash>6d0caa82490247f9ebf20aa5b3d69334</Hash>
+			<Name>pack\8b9576a2afb496f47b99e592292bdc2b</Name>
+			<Hash>8b9576a2afb496f47b99e592292bdc2b</Hash>
 		</PatchFile>
 		<PatchFile>
 			<Name>upload\93.jpg</Name>
