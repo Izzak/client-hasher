@@ -20,13 +20,16 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.x
-    - name: Install dependencies
+#    - name: Install dependencies
+#      run: |
+#        python -m pip install --upgrade pip
+#        pip install imohash
+#    - name: Run imohash
+#      run: |
+#        python imohash_test.py
+    - name: Run hasher
       run: |
-        python -m pip install --upgrade pip
-        pip install imohash
-    - name: Run imohash
-      run: |
-        python imohash_test.py
+        python gethash.py
     - name: Commit hash
       run: |
         git config --global user.name 'Izzak'
