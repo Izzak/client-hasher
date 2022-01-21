@@ -33,7 +33,7 @@ for folder in list(subfolders):
     for soubor in list(files):
         with open(filelist, "a") as f:
             f.write("\t\t<PatchFile>\n")
-            f.write("\t\t\t<Name>{}</Name>\n".format(soubor.replace("client/","",1)))
+            f.write("\t\t\t<Name>{}</Name>\n".format(soubor.replace("client/","",1).replace("/","\\")))
             f.write("\t\t\t<Hash>{}</Hash>\n".format(md5(soubor)))
             f.write("\t\t</PatchFile>\n")
 
