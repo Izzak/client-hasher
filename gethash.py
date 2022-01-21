@@ -11,11 +11,6 @@ def md5(fname):
 slozka = "client/"
 filelist = "filelist.xml"
 
-with open(filelist, "w") as f:
-    f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-    f.write("<PatchList>\n")
-    f.write("\t<PatchFiles>\n")
-
 def fast_scandir(dirname):
     subfolders = [f.path for f in os.scandir(dirname) if f.is_dir()]
     for dirname in list(subfolders):
@@ -26,6 +21,18 @@ subfolders = [f.path for f in os.scandir(slozka) if f.is_dir()]
 #subfolders.remove(slozka+"\\_MAKE_PROPERTY_XML")
 for dirname in list(subfolders):
     subfolders.extend(fast_scandir(dirname))
+
+with open(filelist, "w") as f:
+    f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+    f.write("<PatchList>\n")
+    if len(subfolders) >= 1:
+        f.write("\t<PatchDirectories>\n")
+        for folder in list(subfolders):
+            f.write("\t\t<PatchDirectory>\n")
+            f.write("\t\t\t<Name>{}</Name>\n".format(folder.replace("client/","",1)))
+            f.write("\t\t</PatchDirectory>\n")
+        f.write("\t</PatchDirectories>\n")
+    f.write("\t<PatchFiles>\n")
 
 subfolders.append("client/")
 for folder in list(subfolders):
